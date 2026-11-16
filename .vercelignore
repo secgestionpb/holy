@@ -1,0 +1,11 @@
+# Artefactos que no deben subir al build de Vercel
+node_modules/
+.turbo/
+.vite/
+dist/
+*.log
+.playwright-mcp/
+*.xlsx
+*.png
+.env*
+!.env.example

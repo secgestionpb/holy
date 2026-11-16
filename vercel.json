@@ -1,0 +1,29 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm --filter web build",
+  "outputDirectory": "apps/web/dist",
+  "rewrites": [
+    {
+      "source": "/rest/v1/:path*",
+      "destination": "https://wqqsaxoebrekdrmzjdod.supabase.co/rest/v1/:path*"
+    },
+    {
+      "source": "/auth/v1/:path*",
+      "destination": "https://wqqsaxoebrekdrmzjdod.supabase.co/auth/v1/:path*"
+    },
+    {
+      "source": "/storage/v1/:path*",
+      "destination": "https://wqqsaxoebrekdrmzjdod.supabase.co/storage/v1/:path*"
+    },
+    {
+      "source": "/functions/v1/:path*",
+      "destination": "https://wqqsaxoebrekdrmzjdod.supabase.co/functions/v1/:path*"
+    },
+    {
+      "source": "/app/:path*",
+      "destination": "/index.html"
+    }
+  ]
+}

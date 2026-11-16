@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.turbo/
+.vite/
+*.local
+*.log
+.DS_Store
+
+.env*
+!.env.example
+
+# Vercel
+.vercel/
+
+# Archivos de prueba / artefactos locales
+~$*
+*.xlsx
+*.png
+.playwright-mcp/

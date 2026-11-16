@@ -1,0 +1,17 @@
+{
+  "name": "cmms-hotelero",
+  "private": true,
+  "packageManager": "pnpm@12.9.1",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
+    "db:push": "supabase db push",
+    "fn:deploy": "supabase functions deploy login-custom --no-verify-jwt && supabase functions deploy auth-refresh --no-verify-jwt && supabase functions deploy admin-users && supabase functions deploy send-notifications --no-verify-jwt && supabase functions deploy validate-asset-code && supabase functions deploy m1-import-assets && supabase functions deploy asset-warranty-engine --no-verify-jwt && supabase functions deploy warranty-expiring-digest --no-verify-jwt && supabase functions deploy asset-replacement-alert && supabase functions deploy wo_close_engine && supabase functions deploy wo_dispatch_push --no-verify-jwt",
+    "admin:create": "node scripts/create-admin.mjs"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.4"
+  }
+}

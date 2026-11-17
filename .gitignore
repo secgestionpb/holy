@@ -11,6 +11,7 @@ dist/
 
 # Vercel
 .vercel/
+vercel-login.txt
 
 # Archivos de prueba / artefactos locales
 ~$*

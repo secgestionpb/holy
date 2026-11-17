@@ -1,3 +1,8 @@
 packages:
   - apps/*
   - packages/*
+
+# core-js (opcional de jspdf/canvg) solo imprime un aviso en su postinstall;
+# se deniega explícitamente para evitar ERR_PNPM_IGNORED_BUILDS en CI (Vercel).
+allowBuilds:
+  core-js: false
